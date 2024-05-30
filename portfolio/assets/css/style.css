@@ -248,7 +248,9 @@ html {
 
 /* Dark Mode toggle switch button */
 .dark_toggler {
+  appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
   position: relative;
   cursor: pointer;
   width: 100px;
