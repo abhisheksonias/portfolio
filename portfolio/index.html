@@ -42,6 +42,7 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <script defer src="./assets/js/dynamicTitle.js"></script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DBYXH1HD6L"></script>
     <script>
@@ -68,7 +69,7 @@
     <!--Particles effect-->
     <div id="home">
         <section class="center">
-            <div id="particles-js"></div>
+            <!-- <div id="particles-js"></div> -->
         </section>
     </div>
     <center>
@@ -242,8 +243,26 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
-    <script src="assets/js/particle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://www.vantajs.com/dist/vanta.net.min.js"></script>
+    <script src="three.r134.min.js"></script>
+    <script src="vanta.net.min.js"></script>
+    <script>
+        VANTA.NET({
+            el: "#home",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xc79e45,
+            backgroundColor: 0x0
+        })
+    </script>
 
+    <!-- <script src="assets/js/particle.js"></script> -->
 </body>
 
 </html>

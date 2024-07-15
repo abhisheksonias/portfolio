@@ -43,11 +43,8 @@ html[data-theme="dark"] {
 body{
   font-family: "Poppins";
 }
-#home,
-#particles-js {
-  position: relative;
-  height: 100vh;
-  width: 100%;
+#home{
+  min-height: 100vh; /* Example: Full viewport height */
 }
 
 .section {
