@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-  // Select the target element
+
   const aboutElement = document.querySelector('.about');
 
-  // Define the content you want to load
+  
   const aboutContent = `
   <about style="background-color:#2b2a2a;">
     <div class="p-4">  
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   
  `;
 
-  // Insert the content into the target element
+ 
   aboutElement.innerHTML = aboutContent;
 });
-// About
+
