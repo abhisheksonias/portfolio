@@ -471,3 +471,72 @@ $(function submitAnimation() {
     }
   });
 });
+
+// animated text
+document.addEventListener('DOMContentLoaded', function () {
+  const allElements = document.querySelectorAll('.animated-text');
+  
+  allElements.forEach((element) => {
+    const txtElement = element;
+    const wordsList = txtElement.getAttribute('data-words');
+    const words = wordsList.split(', ');
+    let wordsCount = 0;
+
+    function entry() {
+      if (wordsCount < words.length) {
+        const word = words[wordsCount];
+        const txtArr = word.split('');
+        let count = 0;
+
+        txtElement.textContent = '';
+
+        // Create and append spans for each letter in the word
+        txtArr.forEach((letter) => {
+          const _letter = letter === ' ' ? '&nbsp;' : letter;
+          txtElement.innerHTML += `<span>${_letter}</span>`;
+        });
+
+        const spans = txtElement.querySelectorAll('span');
+
+        // Set an interval to reveal letters one by one
+        const letterInterval = setInterval(activeLetter, 70);
+
+        function activeLetter() {
+          spans[count].classList.add('active');
+          count++;
+
+          if (count === spans.length) {
+            clearInterval(letterInterval);
+
+            // Wait 1.5 seconds before starting to erase
+            setTimeout(() => {
+              eraseText();
+            }, 1500);
+          }
+        }
+
+        function eraseText() {
+          let removeInterval = setInterval(removeLetter, 40);
+          count = spans.length - 1;
+
+          function removeLetter() {
+            spans[count].classList.remove('active');
+            count--;
+
+            if (count === -1) {
+              clearInterval(removeInterval);
+              wordsCount++;
+              entry(); // Start typing the next word
+            }
+          }
+        }
+      } else {
+        // Reset counter and restart if all words are processed
+        wordsCount = 0;
+        entry();
+      }
+    }
+
+    entry(); // Start the typing effect
+  });
+});
