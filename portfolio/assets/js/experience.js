@@ -15,7 +15,7 @@ const exp = [
     title: "Developer",
     cardImage: "assets/images/experience-page/raj.jpg",
     place: "Rajasthan Tour Advisor",
-    time: "(Dec, 2022 - Present)",
+    time: "(Dec, 2022 - June 2023)",
     desp: "<li>Focus on creating user-facing interfaces, translating design mockups into responsive web pages using HTML, CSS, and JavaScript.</li><li>Act as a bridge between the development team and clients, understanding their needs, gathering requirements, and communicating project progress.</li><li>Provide technical support to clients, troubleshoot issues, and address their concerns promptly, ensuring a positive client experience.</li>",
   },
 ];
@@ -60,7 +60,7 @@ const volunteershipcards = [
     description:"Responsible for handling the smooth flow of event ",
   },
   {
-    title: "StudentCode-in 2020",
+    title: " MU Fest 2023",
     cardImage: "assets/images/experience-page/mufest.jpg",
     description: "In charge of campus decoration as a core committee member.",
   },
@@ -91,6 +91,13 @@ document.addEventListener("DOMContentLoaded", showCards);
 const hackathonsection = document.querySelector(".hackathon-section");
 const mentor = [
   {
+    title: "Hack The Mountain 5.0",
+    subtitle: "1St Runner Up ",
+    image: "assets/images/experience-page/HTM.jpg",
+    desp: "Participated in a HTM 5.0 , In the healthcare track, the team developed an innovative Ayurveda-based healthcare app designed to be a one-stop solution for all Ayurvedic needs.",
+    href: "https://hackthemountain.tech/",
+  },
+  {
     title: "Smart India Hackathon",
     subtitle: "Participant",
     image: "assets/images/experience-page/sih.png",
@@ -103,7 +110,7 @@ const mentor = [
     image: "assets/images/experience-page/intellify.jpg",
     desp: "Participated in a hackathon, where our team developed a Smart Parking System, earning us a spot in the final round.",
     href: "https://www.intellify.marwadiuniversity.ac.in/",
-  },
+  }
 ];
 
 const showCards3 = () => {
